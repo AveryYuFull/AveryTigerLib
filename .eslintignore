@@ -1,0 +1,7 @@
+*.js
+dist/
+doc/
+dist/
+docs/
+modules/
+types/

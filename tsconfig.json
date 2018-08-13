@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "outDir": "./temp",
+        "declaration":true,
+        "declarationDir": "./types",
+        "target": "es5",
+        "strict": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "removeComments": false,
+        "allowJs": false,
+        "baseUrl": "./src/",
+        // "paths": { // 使用这个路径后生成的types文件路径不正确
+        //     "common/*": ["./common/*"],
+        //     "base/*": ["./modules/base/*"]
+        // },
+        "typeRoots": [
+            "node_modules/@types",
+            "./src/**/*.d.ts"
+        ],
+        "lib": [
+            "dom",
+            "es2015"
+        ]
+    },
+    "include": [
+        "./src/**/*",
+        "./src/*"
+    ],
+    "exclude": [
+        "**/*.spec.ts",
+        "**/.svn/**",
+        "**/.svn/**/*.*",
+        ".svn/**",
+        ".svn/**/*.*"
+    ],
+    "compileOnSave": false
+}

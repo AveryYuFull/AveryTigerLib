@@ -1,0 +1,176 @@
+{
+    "extends": [
+        "tslint-eslint-rules"
+    ],
+    "rulesDirectory": [],
+    "rules": {
+        "no-constant-condition": true,
+        "valid-jsdoc": [
+            false,
+            {
+                "prefer": {
+                "arg": "param",
+                "argument": "param",
+                "class": "class",
+                "constructor": "constructor",
+                // "return": "returns",
+                "virtual": "abstract"
+                },
+                "preferType": {
+                "boolean": "Boolean",
+                "number": "Number",
+                "object": "Object",
+                "string": "String"
+                }, //类型格式
+                "matchDescription": ".+", //必须写描述
+                "requireReturn": false, //没有返回值可以不用写@return
+                "requireReturnType": true, //必须写返回类型
+                "requireParamType": false,
+                "requireReturnDescription": false,
+                "requireParamDescription": true
+            }
+        ],
+        "valid-typeof": true,
+        "one-variable-per-declaration": [true, "ignore-for-loop"],
+        "interface-name": [true, "always-prefix"],
+        "encoding": true,
+        // "align": [true, "parameters", "statements","arguments"],
+        "max-classes-per-file": [true, 1],
+        "max-file-line-count": [true, 300],
+        "use-isnan": true,
+        // "no-for-in-array":true,
+        "ban-types": [true,
+            ["Object", "Use {} instead."],
+            ["String"]
+        ],
+        "no-duplicate-variable": true,
+        "indent": [true, "spaces", "4"],
+        "ter-indent": [true, 4, {
+            "SwitchCase": 1,
+            "VariableDeclarator": 1
+        }],
+        "jsdoc-format": true,
+        // "completed-docs": [true,
+        //     "classes",
+        //     "functions",
+        //     "methods",
+        //     "properties"
+        // ],
+        "arrow-return-shorthand": true,
+        "callable-types": true,
+        "class-name": true,
+        "comment-format": [
+            true,
+            "check-space"
+        ],
+        "curly": true,
+        "eofline": true,
+        "forin": true,
+        "import-blacklist": [
+            true,
+            "rxjs"
+        ],
+        "import-spacing": true,
+        "interface-over-type-literal": true,
+        "label-position": true,
+        "max-line-length": [
+            true,
+            140
+        ],
+        "member-access": false,
+        "no-var-requires": false,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                "static-field",
+                "instance-field",
+                "static-method",
+                "instance-method"
+                ]
+            }
+        ],
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-console": [
+            true,
+            "debug",
+            "info",
+            "time",
+            "timeEnd",
+            "trace"
+        ],
+        "no-construct": true,
+        "no-debugger": true,
+        "no-duplicate-super": true,
+        "no-empty": false,
+        "no-empty-interface": false,
+        "no-eval": true,
+        "no-inferrable-types": [
+            true,
+            "ignore-params",
+            "ignore-properties"
+        ],
+        "no-misused-new": true,
+        "no-non-null-assertion": true,
+        "no-shadowed-variable": false,
+        "no-string-literal": false,
+        "no-string-throw": true,
+        "no-switch-case-fall-through": true,
+        "no-trailing-whitespace": true,
+        "no-unnecessary-initializer": true,
+        "no-unused-expression": false,
+        // "no-use-before-declare": true,
+        "no-var-keyword": true,
+        "object-literal-sort-keys": false,
+        "one-line": [
+            true,
+            "check-open-brace",
+            "check-catch",
+            "check-else",
+            "check-whitespace"
+        ],
+        "prefer-const": false,
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "radix": true,
+        "semicolon": [
+            true,
+            "always",
+            "ignore-bound-class-methods"
+        ],
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ],
+        "typedef-whitespace": [
+            true,
+            {
+                "call-signature": "nospace",
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            }
+        ],
+        "typeof-compare": true,
+        "unified-signatures": true,
+        "variable-name": false,
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-separator",
+            "check-type"
+        ],
+        "no-input-rename": false,
+        "no-output-rename": false,
+        "linebreak-style": false //换行风格
+    },
+    "ecmaFeatures": {
+        "objectLiteralShorthandProperties": true // 对象字面量属性名简写
+    }
+}
