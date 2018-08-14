@@ -1,5 +1,7 @@
 import { IInitFormControlData, IFormFilter, IFormControlDataMap } from './formConfig'
 import { IKeyValue } from '../../../library/helpers/IKeyValue'
+import { IBaseInterface } from 'library/basic/base.interface';
+import { IValidatorData } from './validatorConfig';
 
 export interface IFormModule {
     /**
@@ -43,4 +45,16 @@ export interface IFormModule {
         defaultData?: IKeyValue,
         callback?: IFormFilter
     ): FormGroup
+}
+
+/**
+ * form interface function
+ */
+export interface IFormInterface<T = any, V = any> extends IBaseInterface {
+    value: T;
+    valid: V;
+    get(key?: string | number): FormGroup | FormControl | FormArray | null;
+    getValid(): V;
+    getValue(): T;
+    setValue(defaultData: any, callback?: IFormFilter): any;
 }
